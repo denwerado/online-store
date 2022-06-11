@@ -1,0 +1,31 @@
+.cmp-goodville-ordering
+    display: block
+    width: 100%
+    &__radio
+        display: inline-block
+        margin-bottom: 10px
+        margin-right: 10px
+        & input
+            display: none
+            &:checked
+                & + label
+                    background-color: rgba(#ccc, 0.8)
+        & label
+            cursor: pointer
+            display: inline-block
+            padding: 5px 8px
+            margin: 0 !important
+            min-width: 75px
+            text-align: center
+            background: #FFFFFF
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+            border-radius: 5px
+            font-weight: 500
+            font-size: 16px
+            transition: 0.5s all
+            &:hover
+                background-color: rgba(#ccc, 0.5)
+    & .cmp-button
+        width: auto
+        padding: 5px 15px
+        font-size: 16px

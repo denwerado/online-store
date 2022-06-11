@@ -1,0 +1,17 @@
+.cmp-success-check-mark
+    max-width: 100px
+    display: block
+    margin: auto
+    & .path
+        stroke-dasharray: 1000
+        stroke-dashoffset: 0
+    & .path.check
+        stroke-dashoffset: -100
+        animation: check 3s ease-in infinite
+
+@keyframes check 
+    0% 
+        stroke-dashoffset: -100
+    100% 
+        stroke-dashoffset: 900
+

@@ -1,0 +1,191 @@
+form.cmp-goodville-cart-form
+    margin: 0
+    color: #2E2E2E
+    & .cmp-goodville-cart-form 
+        &__contents
+            display: block
+            margin-bottom: 0
+        &__tbody
+            display: block
+        &__item
+            display: flex
+            align-items: flex-start
+            padding: 10px
+            background: #F9F9F9
+            border-radius: 5px
+            &:nth-child(n+2)
+                margin-top: 30px
+            & td
+                background-color: transparent
+            & .product-thumbnail
+                display: block
+                align-items: center
+                justify-content: center
+                padding: 15px
+                filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1))
+                background-color: #fff
+                & img
+                    min-width: 250px
+                    max-width: 280px
+                    width: 100%
+                    border-radius: 5px
+                    overflow: hidden
+            & .product-name
+                padding: 0
+                margin-left: 30px
+                max-width: 500px
+                & a
+                    font-weight: 600
+                    font-size: 30px
+                    color: inherit
+                    text-decoration: none
+                & .product-price
+                    margin: 0
+                    margin-top: 15px
+                    font-weight: 500
+                    font-size: 24px
+                & .variation
+                    margin: 0
+                    margin-top: 15px
+                    & .item
+                        display: flex
+                        align-items: center
+                        & dt
+                            font-weight: 500
+                            font-size: 25px
+                            line-height: 37px
+                        & dd
+                            margin: 0
+                            margin-left: 20px
+                            padding: 5px
+                            min-width: 75px
+                            text-align: center
+                            background: #FFFFFF
+                            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+                            border-radius: 5px
+                            font-weight: 500
+                            font-size: 20px
+                            & p
+                                margin: 0
+                        &:nth-child(n+2)
+                            margin-top: 20px
+                & .cmp-quantity
+                    margin-top: 25px
+            & .product-subtotal
+                margin-right: 0
+                margin-left: auto
+                padding: 0
+                padding: 25px 15px 0 10px
+                & .amount 
+                    display: block
+                    font-weight: 500
+                    font-size: 40px
+                & .remove
+                    display: inline-block
+                    margin-top: 15px
+                    float: right
+                    width: auto
+                    height: auto
+                    text-indent: 0
+                    font-weight: 500
+                    font-size: 20px
+                    color: #9F9F9F
+                    &::before
+                        content: ''
+            & td
+                display: inline-block
+                background: none
+        &__buttons
+            display: flex
+            justify-content: flex-end
+            margin-top: 15px
+            & td
+                border: none
+
+@media ( max-width: 1200px )
+    form.cmp-goodville-cart-form
+        & .cmp-goodville-cart-form 
+            &__item
+                & .product-name
+                    & a
+                        font-size: 28px
+                & .product-subtotal 
+                    & .amount
+                        font-size: 36px
+
+@media ( max-width: 1024px )
+    form.cmp-goodville-cart-form
+        & .cmp-goodville-cart-form 
+            &__item
+                & .product-name
+                    & a
+                        font-size: 24px
+                    & .product-price
+                        font-size: 22px
+                    & .variation 
+                        & .item
+                            & dt
+                                font-size: 20px
+                            & dd
+                                font-size: 18px
+                    & .cmp-quantity
+                        margin-top: 20px
+                        & .name
+                            font-size: 20px
+                        & .cmp-form__count
+                            & input
+                                font-size: 26px
+                & .product-subtotal 
+                    & .amount
+                        font-size: 32px
+                    & .remove
+                        margin-top: 10px
+
+@media ( max-width: 768px )
+    form.cmp-goodville-cart-form
+        & .cmp-goodville-cart-form 
+            &__item
+                position: relative
+                display: block
+                & td
+                    text-align: left
+                & .product-thumbnail
+                    display: block
+                    max-width: 350px
+                & .product-name
+                    display: block
+                    margin: 15px 0 0 0
+                    //width: 100%
+                    max-width: none
+                    &::before
+                        content: none
+                & .product-subtotal
+                    position: absolute
+                    top: 0
+                    right: 0
+                    &::before
+                        content: none
+
+@media ( max-width: 650px )
+    form.cmp-goodville-cart-form
+        & .cmp-goodville-cart-form 
+            &__item
+                & .product-thumbnail
+                    max-width: none
+                & .product-name
+                    & .product-price
+                        font-size: 24px
+                & .product-subtotal
+                    position: static
+                    display: block
+                    padding: 0
+                    margin-top: 15px
+                    text-align: right
+
+@media ( max-width: 480px )
+    form.cmp-goodville-cart-form
+        & .cmp-goodville-cart-form 
+            &__item
+                & .product-subtotal
+                    & .amount
+                        font-size: 28px

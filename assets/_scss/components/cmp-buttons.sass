@@ -1,0 +1,29 @@
+.cmp-button
+    display: flex
+    justify-content: center
+    width: 275px
+    max-width: 275px
+    font-weight: 500
+    font-size: 25px
+    padding: 6px
+    border-radius: 5px
+    cursor: pointer
+    transition: opacity 1s
+    &:disabled
+        opacity: 0.5
+    &_red
+        color: #ffffff
+        background-color: rgba(234, 0, 0, 1)
+        &:hover
+            background-color: rgba(245, 0, 0, 0.8)
+            color: #ffffff
+    &_black
+        &-reverse
+            color: rgba(0, 0, 0, 0.8)
+            border: 1px solid rgba(0, 0, 0, 0.74)
+            transition: all 0.5s
+            &:hover
+                color: #fff
+                background-color: rgba(0, 0, 0, 0.8)
+
+

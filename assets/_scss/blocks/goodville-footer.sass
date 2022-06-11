@@ -1,0 +1,118 @@
+.goodville-footer
+    background-color: #292929
+    padding: 66px 0
+    & .goodville-footer__block
+        display: flex
+        align-items: center
+        justify-content: space-between
+        & .footer__nav
+            display: flex
+            align-items: center
+            & .footer__logo
+                display: inline-block
+                margin-right: 50px
+                & .image
+                    max-width: 67px
+                    max-height: 67px
+            & .footer__navigation
+                display: flex
+                align-items: center
+                & .item
+                    font-size: 18px
+                    &:nth-child(n+2)
+                        margin-left: 50px
+                    & .goodville-link
+                        color: #fff
+                        font-size: 18px
+                        font-weight: 500
+    & .goodville-footer__search
+        position: relative
+        max-width: 210px
+        & .magnifier
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            max-height: 20px
+            max-width: 20px
+        & .site-search
+            display: block !important
+            margin: 0
+            width: 100%
+            & .widget_product_search
+                margin: 0
+                & .woocommerce-product-search
+                    box-shadow: none
+                    &:before
+                        content: ''
+                    & .search-field
+                        background: none
+                        padding: 5px
+                        padding-left: 30px
+                        color: #fff
+                        font-weight: 400
+                        font-size: 18px
+                        border-bottom: 1px solid #fff
+                        box-shadow: none
+                        &:focus
+                            outline: none
+
+@media ( max-width: 1400px )
+    .goodville-footer
+        padding: 35px 0
+
+@media ( max-width: 1250px )
+    .goodville-footer
+        & .goodville-footer__block
+            & .footer__nav
+                & .footer__logo
+                    margin-right: 35px
+                & .footer__navigation
+                    & .item
+                        &:nth-child(n+2)
+                            margin-left: 35px
+
+@media ( max-width: 1150px )
+    .goodville-footer
+        & .goodville-footer__block
+            & .footer__nav
+                & .footer__logo
+                    margin-right: 25px
+                & .footer__navigation
+                    & .item
+                        &:nth-child(n+2)
+                            margin-left: 25px
+
+@media ( max-width: 1100px )
+    .goodville-footer
+        & .goodville-footer__block
+            position: relative
+            display: block
+            & .footer__nav
+                display: block
+                & .footer__logo
+                    margin: 0
+                    & .image
+                        max-width: 60px
+                        max-height: 60px
+                & .footer__navigation
+                    margin-top: 25px
+            & .goodville-footer__search
+                position: absolute
+                right: 0
+                top: 15px
+                max-height: 34px
+
+@media ( max-width: 768px )
+    .goodville-footer
+        padding: 25px 0 10px 0
+        & .goodville-footer__block
+            & .footer__nav
+                & .footer__navigation
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    & .item
+                        margin-bottom: 15px
+                        padding: 0 10px
+                        &:nth-child(n+2)
+                            margin-left: 0px

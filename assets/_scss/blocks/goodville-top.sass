@@ -1,0 +1,182 @@
+.goodville-top
+    position: relative
+    height: calc( 100vh - 85px )
+    &__slider
+        position: relative
+        height: 100%
+        & .goodville-top__arrow
+            cursor: pointer
+            position: absolute
+            top: 0
+            height: 100%
+            width: 70px
+            z-index: 2
+            transition: all 0.5s
+            & svg
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                max-width: 20px
+                max-height: 35px
+                opacity: 0.5
+                transition: all 0.5s
+            &:nth-child(1)
+                left: 0
+                & svg
+                    left: 30px
+                    transform: translateY(-50%) rotate(180deg)
+            &:nth-child(2)  
+                right: 0
+                & svg
+                    right: 30px
+            &:hover
+                background-color: rgba(#000, 0.3)
+                & svg
+                    opacity: 1
+        & .goodville-top__item
+            display: flex
+            align-items: center
+            height: 100%
+            background-repeat: no-repeat
+            background-size: cover
+            & .top__title
+                color: #ffffff
+                font-size: 60px
+                line-height: 1.5em
+            & .top__subtitle
+                color: #ffffff
+                font-size: 43px
+                line-height: 1.5em
+                font-weight: 400
+                & p
+                    margin: 0
+            & .cmp-button
+                margin-top: 70px
+            & .goodville-container
+                width: 100%
+    & #main-slider
+        position: relative
+        height: 100%
+        & .owl-stage-outer
+            height: 100%
+            & .owl-stage
+                height: 100%
+                & .owl-item
+                    height: 100%
+        & .owl-dots
+            position: absolute
+            bottom: 20px
+            left: 50%
+            transform: translateX(-50%)
+            & .owl-dot
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                border: 1px solid rgba(255, 255, 255, 0.74)
+                transition: all 0.5s
+                &:focus
+                    outline: none
+                &:nth-child(n+2)
+                    margin-left: 10px
+            & .active
+                background-color:  rgba(255, 255, 255, 0.5)
+                border: 1px solid rgba(255, 255, 255, 0.5)
+        
+@media ( max-width: 1400px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__title
+                    font-size: 54px
+                & .top__subtitle
+                    font-size: 36px
+                & .cmp-button
+                    margin-top:  50px
+
+@media ( max-width: 1290px )
+    .goodville-top
+        &__slider
+            & .goodville-top__arrow
+                width: 50px
+                &:nth-child(1)
+                    & svg
+                        left: 15px
+                &:nth-child(2)
+                    & svg
+                        right: 15px
+            & .goodville-top__item
+                & .goodville-container
+                    padding-left: 155px
+                    padding-right: 55px
+
+@media ( max-width: 1150px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__title
+                    font-size: 50px
+                    line-height: 1.3em
+                & .top__subtitle
+                    font-size: 32px
+                & .goodville-container
+                    padding-left: 130px
+                & .cmp-button
+                    width: 220px
+                    font-size: 22px
+
+@media ( max-width: 1024px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__title
+                    font-size: 42px
+                & .top__subtitle
+                    font-size: 32px
+                & .goodville-container
+                    padding-left: 110px
+
+@media ( max-width: 950px )
+    .goodville-top
+        height: calc( 100vh - 60px )
+        &__slider
+            & .goodville-top__arrow
+                width: 30px
+                & svg
+                    width: 14px
+                &:nth-child(1)
+                    & svg
+                        left: 8px
+                &:nth-child(2)
+                    & svg
+                        right: 8px
+            & .goodville-top__item
+                & .goodville-container
+                    padding: 0 35px
+
+@media ( max-width: 768px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__subtitle
+                    margin-top: 15px
+
+@media ( max-width: 576px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__title
+                    font-size: 36px
+                & .top__subtitle
+                    font-size: 28px
+
+@media ( max-width: 480px )
+    .goodville-top
+        &__slider
+            & .goodville-top__item
+                & .top__title
+                    font-size: 32px
+                & .top__subtitle
+                    font-size: 24px
+                & .cmp-button
+                    width: 180px
+                    font-size: 20px

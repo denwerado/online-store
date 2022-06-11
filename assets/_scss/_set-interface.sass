@@ -1,0 +1,105 @@
+*
+    box-sizing: border-box
+    scrollbar-color: #2E2E2E #ffffff
+    ::-webkit-scrollbar
+        width: 7px
+        background-color: #ffffff
+    ::-webkit-scrollbar-thumb 
+        background-color:  #2E2E2E
+        border-radius: 10px
+        width: 7px
+
+body.goodville-body
+    position: relative
+    min-height: 100vh
+
+
+//#####Basic classes with properties for the external behavior of blocks
+.goodville-main
+    margin: 0
+    
+.goodville-container
+    max-width: 1290px
+    padding: 0 45px
+    margin: auto
+    box-sizing: border-box
+    &__left-padding
+        padding-left: 145px
+
+.goodville-site
+    padding-top: 85px
+    & .site-content
+        min-height: 75vh
+    
+.goodville-content
+    width: auto !important
+    margin: 0 !important
+    float: none !important
+
+
+//#####Bread crumbs
+.goodville-breadcrumb
+    margin: 0 !important
+
+//#####Woo message
+.woocommerce-message
+    margin-bottom: 30px !important
+    background-color: #f9f9f9 !important
+    color: #2e2e2e !important
+    &::before
+        color: #2e2e2e !important
+    & .button
+        color: #2e2e2e !important
+
+
+//#####Global element styles
+a:focus
+    outline: none
+input:focus
+    outline: none
+button:focus
+    outline: none
+textarea:focus
+    outline: none
+
+.goodville-link
+    color: inherit
+    text-decoration: none !important
+    transition: 0.6s all 
+
+.goodville-ul
+    padding: 0
+    margin: 0
+    list-style-type: none
+
+.goodville-button
+    display: inline-block
+    background: none
+    outline:  none
+    border:  none
+    cursor: pointer
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    padding: 0
+    &:focus
+        outline: none
+
+.goodville-input
+    &:focus
+        outline: none
+    
+
+@media (max-width: 1290px )
+    .goodville-container__left-padding
+        padding-left: 45px
+
+    
+@media (max-width: 1024px )
+    .goodville-container
+        padding: 0 25px
+        &__left-padding
+            padding-left: 25px
+
+@media (max-width: 950px )
+    .goodville-site
+        padding-top: 60px

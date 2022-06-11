@@ -1,0 +1,172 @@
+.cmp-form
+    & form
+        margin: 0
+    &__row
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        & input
+            margin-top: 20px
+            margin-right: 50px
+        & .cmp-form__validate
+            margin-top: 20px
+            margin-right: 50px
+            & input
+                margin: 0
+
+    /*
+        Combined input + button
+        */
+    &__combined
+        display: flex
+        width: 100%
+        line-height: 1.5em
+        & .cmp-form__input
+            border-radius: 5px 0px 0px 5px
+            width: 69%
+        & .cmp-button
+            margin: 0 !important
+            width: 31%
+            border-radius: 0px 5px 5px 0px
+            font-size: 20px
+            font-weight: 400
+            padding: 12px
+
+    &__validate
+        position: relative
+        & fieldset
+            position: absolute
+            bottom: 100%
+            left: 0
+            width: 100%
+            padding: 0
+            margin: 0
+            background: none
+            border-radius: 5px
+            visibility: hidden
+            opacity: 0
+            transition: all 0.5s
+            & legend
+                margin: 0
+                padding: 0
+                font-size: 12px
+                transition: color 0.5s
+                line-height: 1em
+        & input
+            position: relative
+            transition: border 0.5s
+        &.error
+            & fieldset
+                border-top: 1px solid #DC143C
+                visibility: visible
+                opacity: 1
+            & legend
+                color: #DC143C
+            & input
+                border: 1px solid #DC143C
+    /*
+        Standart input
+        */
+    &__input
+        display: inline-block
+        background-color: #fff !important
+        padding: 12px 30px !important
+        font-size: 20px
+        font-weight: 400 !important
+        &_gray
+            padding: 7px 15px !important
+            width: 100%
+            max-width: 210px
+            background: #F3F3F3
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05) !important
+            border-radius: 5px
+            font-weight: 600 !important
+            font-size: 18px
+            color: rgba(0, 0, 0, 0.8) !important
+            &-medium
+                max-width: 280px
+            &-long
+                max-width: 335px
+
+    /*
+        Quantity switching
+        */
+    &__count
+        display: flex
+        align-items: center
+        & .change__count
+            cursor: pointer
+            padding: 12px 8px 
+            background-color: #fff
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+            border-radius: 5px
+            line-height: 0
+            transition: all 0.5s
+            & svg
+                max-width: 18px
+                max-height: 9px
+            &-decrease
+                & svg
+                    transform: rotate(180deg)
+            &:hover
+                background-color: rgba(#ccc, 0.8)
+        & input
+            padding: 0 !important
+            background-color: rgba(#fff, 0)
+            box-shadow: none
+            width: auto !important
+            max-width: 50px !important
+            font-size: 30px
+            color: #2E2E2E
+            &::-webkit-inner-spin-button 
+                display: none
+                -webkit-appearance: none
+                margin: 0
+    &__subtitle
+        margin: 0
+        font-weight: 600
+        font-size: 30px
+        color: #000000
+        &:nth-child(n+2)
+            margin-top: 40px
+    
+    & .cmp-button
+        margin-top: 70px
+
+
+@media ( max-width: 1024px ) 
+    .cmp-form
+        &__subtitle
+            font-size: 28px
+        & .cmp-button
+            margin-top: 50px
+
+@media ( max-width: 768px )
+    .cmp-form
+        &__combined
+            & .cmp-button
+                font-size: 18px
+                padding: 8px
+        &__input
+            padding: 8px 15px !important
+            font-size: 18px
+        &__count
+            & input
+                font-size: 26px
+        &__subtitle
+            font-size: 26px
+
+@media ( max-width: 576px )
+    .cmp-form
+        &__subtitle
+            font-size: 24px
+            &:nth-child(n+2)
+                margin-top: 30px
+
+@media ( max-width: 480px )
+    .cmp-form
+        &__combined
+            & .cmp-button
+                font-size: 16px
+        &__input
+            font-size: 16px

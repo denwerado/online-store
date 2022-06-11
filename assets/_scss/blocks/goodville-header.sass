@@ -1,0 +1,231 @@
+.goodville-header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    padding: 25px 0
+    margin-bottom: 0 !important
+    border: none
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+    z-index: 1001
+    //Блок
+    &__block
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 0
+        padding: 0
+        max-width: none
+        box-sizing: border-box
+        &::before
+            display: none
+        &::after
+            display: none
+
+        //Nav
+        & .header__nav
+            display: flex
+            align-items: center
+            margin-right: 0 !important
+            width: auto !important
+            float: none
+            & .header__navigation
+                display: flex
+                align-items: center
+                & .item
+                    position: static
+                    font-size: 18px
+                    &:nth-child(n+3)
+                        margin-left: 50px
+                    & .goodville-link
+                        //color: #fff
+                        font-size: 18px
+                        font-weight: 500
+                        padding: 0 
+        & .header__logo
+            display: block
+            position: absolute
+            left: 50px
+            top: 50%
+            padding: 0
+            margin: 0
+            line-height: 0
+            transform: translateY(-50%)
+            & svg
+                max-width: 60px
+                max-height: 60px
+            &_mobile
+                display: none
+                position: absolute
+                padding: 0
+                margin: 0
+                line-height: 0
+                & svg
+                    max-width: 50px
+                    max-height: 50px
+            
+        //Cart
+        & .goodville-header__cart
+            width: auto !important
+            //line-height: 0
+            & .goodville-cart__link
+                display: block
+                padding: 0 !important
+                &::after
+                    content: ''
+                    display: none
+                & .goodville-cart__wrap
+                    display: flex
+                    align-items: center
+                    & svg
+                        max-width: 28px
+                        max-height: 28px
+                        margin-right: 10px
+                    & span
+                        font-size: 20px
+            & li
+                &:nth-child(2)
+                    position: relative
+                    & .widget_shopping_cart
+                        position: absolute
+                        top: 100% 
+                        width: auto
+                        min-width: 250px
+                        z-index: 999999
+                        font-size: .875em 
+                        background-color: #f0f0f0
+            &:hover
+                & .widget_shopping_cart
+                    display: block
+                    left: auto !important
+                    right: 0
+
+        & .goodville-header__burger
+            position: relative
+            display: none
+            cursor: pointer
+            margin-left: 50px
+            width: 35px
+            height: 20px
+            z-index: 1003
+            &::before 
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #2a2623
+                transition: all 1s
+            &::after 
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #2a2623
+                transition: all 1s
+            & .line
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                width: 100%
+                height: 2px
+                background-color: #2a2623
+            &_active
+                & .line
+                    height: 0
+                &::before 
+                    top: 50%
+                    transform: translateY(-50%) rotate(45deg)
+                &::after
+                    bottom: auto
+                    top: 50%
+                    transform: translateY(-50%) rotate(-45deg)
+
+
+
+@media ( max-width: 1290px )
+    .goodville-header
+        padding: 12px 0
+        &__block
+            & .header__nav
+                & .header__navigation
+                    & .item
+                        &:nth-child(n+2)
+                            margin-left: 50px
+            & .header__logo
+                position: static
+                transform: none
+
+@media ( max-width: 1150px )
+    .goodville-header
+        &__block
+            & .header__nav
+                & .header__navigation
+                    & .item
+                        &:nth-child(n+2)
+                            margin-left: 25px
+
+@media ( max-width: 950px )
+    .goodville-header
+        padding: 14px 0
+        &__block
+            justify-content: flex-end
+            & .header__nav
+                position: fixed
+                top: 0
+                right: 0
+                display: block
+                overflow: hidden
+                width: 0 !important
+                height: 100vh
+                background-color: #fff
+                z-index: 1002
+                box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1)
+                transition: width 1s
+                & .header__navigation
+                    flex-direction: column
+                    align-items: flex-start
+                    justify-content: space-between
+                    min-width: 50vw
+                    width: 100%
+                    height: 100%
+                    max-height: 400px
+                    padding: 60px 40px 60px 40px
+                    & .item
+                        display: block
+                        margin: 0 
+                        &:nth-child(1)
+                            display: none
+                        &:nth-child(n+2)
+                            margin: 0
+                &_active
+                    width: 50vw !important
+                    
+            & .goodville-header__burger
+                display: block
+            & .header__logo
+                &_mobile
+                    display: block
+                    left: 25px
+                    top: 50%
+                    transform: translateY(-50%)
+
+
+@media ( max-width: 576px )
+    .goodville-header
+        &__block
+            & .header__nav
+                & .header__navigation
+                    min-width: 70vw
+                &_active
+                    width: 70vw !important
+
+            & .goodville-header__cart
+                & li
+                    &:nth-child(2)
+                        display: none
+            & .goodville-header__burger
+                margin-left: 35px

@@ -1,0 +1,53 @@
+.cmp-accordeon
+    position: relative
+    width: 100%
+    margin-top: 20px
+    padding-left: 20px
+    cursor: pointer
+    &::before
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        width: 4px
+        height: 30px
+        background: #EA0000
+    &_active
+        & .cmp-accordeon__header
+            & .arrow
+                transform: rotate(180deg)
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 20px
+        & .title
+            margin: 0
+            font-weight: 400
+            font-size: 18px
+        & .arrow
+            max-width: 26px
+            max-height: 14px
+            margin-left: 10px
+            transition: transform 0.5s
+    &__content
+        display: none
+        padding-bottom: 35px
+        & p
+            font-weight: 300
+            font-size: 16px
+            margin: 0
+            &:nth-child(n+2)
+                margin-top: 15px
+    &__line
+        width: 100%
+        border-bottom: 1px solid #C4C4C4
+
+@media ( max-width: 576px )
+    .cmp-accordeon
+        &__header
+            & .title
+                font-size: 16px
+        &__content
+            & p
+                font-size: 15px

@@ -1,0 +1,45 @@
+.goodville-related-products
+    padding-top: 25px
+    padding-bottom: 100px
+    &__block
+        & .related-products__title
+            margin: 0
+            font-weight: 500
+            font-size: 30px
+            color: #2E2E2E
+        & ul.products
+            margin-top: 30px 
+            display: flex
+            flex-wrap: wrap
+            //justify-content: space-between
+            & li.product
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                float: none !important
+                margin: 0 !important
+                padding: 20px
+                box-shadow: 0 0 20px rgb(0 0 0 / 10%)
+                border-radius: 5px
+                margin-right: 25px
+                & .price
+                    //padding: 0 20px
+                    text-align: left
+                    margin-top: 5px
+                    font-size: 16px
+                    color: #000000
+                & .woocommerce-loop-product__title
+                    //padding: 0 20px
+                    font-weight: 500
+                    font-size: 14px
+                    color: rgba(0, 0, 0, 0.8)
+                    text-align: left
+            &::before
+                content: none
+            &::after
+                content: none
+
+@media ( max-width: 1024px )
+    .goodville-related-products
+        padding: 25px 0 50px 0
+    

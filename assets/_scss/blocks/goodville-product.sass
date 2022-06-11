@@ -1,0 +1,268 @@
+.goodville-product
+    & .goodville-product__block
+        & .product__title
+            margin: 0
+            font-size: 30px
+            font-weight: 600
+        & .product__info
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            margin-top: 20px
+            & .product__summary
+                float: none !important
+                margin: 0 0 0 15px !important
+                padding-top: 50px !important
+                max-width: 570px
+                width: 47.5% !important
+                & .product__price
+                    margin: 0
+                    font-weight: 500
+                    font-size: 40px
+                & .product__cart
+                    margin: 0
+                    margin-top: 50px
+                    padding: 0
+                    & .variations
+                        & tr
+                            display: flex
+                            align-items: flex-start
+                            & .label
+                                & label
+                                    font-weight: 500
+                                    font-size: 25px
+                            & .value
+                                margin: 0
+                                margin-left: 15px
+                                & div
+                                    display: inline-block
+                                    margin-bottom: 20px
+                                    margin-right: 10px
+                                    & input
+                                        display: none
+                                        &:checked
+                                            & + label
+                                                background-color: rgba(#ccc, 0.8)
+                                    & label
+                                        cursor: pointer
+                                        display: inline-block
+                                        padding: 5px
+                                        margin: 0
+                                        min-width: 75px
+                                        text-align: center
+                                        background: #FFFFFF
+                                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+                                        border-radius: 5px
+                                        font-weight: 500
+                                        font-size: 20px
+                                        transition: 0.5s all
+                                        &:hover
+                                            background-color: rgba(#ccc, 0.5)
+                                & .reset_variations
+                                    //position: absolute
+                                    margin: 0
+                                    //bottom: 0
+                                    //right: 10px
+                            &:nth-child(n+2)
+                                margin-top: 50px
+                        & .attribute-pa_goodville
+                            &-width
+                                & .value
+                                    & label
+                                        min-width: 160px
+                    & .single_variation_wrap
+                        margin-top: 50px
+                        & .variations_button
+                            padding: 0
+                        & .cmp-quantity
+                            margin: 0
+                        & .single_add_to_cart_button
+                            display: block
+                            margin-top: 35px
+                            padding: 6px 60px
+                            font-weight: 500
+                            font-size: 25px
+                            color: #fff
+                            background: #EA0000
+                            border-radius: 5px
+                            &:focus
+                                outline: none
+            & .product__slider
+                max-width: 590px 
+                width: 49%
+                & .owl-stage
+                    display: flex
+                    align-items: center
+        & .product__slider-pagination
+            position: relative
+            margin-top: 20px
+            max-width: 980px
+            padding: 0 25px
+            &-item
+                cursor: pointer
+            & svg
+                cursor: pointer
+                position: absolute
+                top: 50%
+                max-width: 16px
+                max-height: 32px
+                opacity: 0.5
+                transition: all 0.3s
+                &:hover
+                    opacity: 1
+            & #product-slider-pagination-prev
+                position: absolute
+                left: 0
+                transform: translateY(-50%) rotate(180deg) 
+            & #product-slider-pagination-next
+                position: absolute
+                right: 0
+                transform: translateY(-50%)
+            & #product-slider-pagination
+                & .owl-stage
+                    display: flex
+                    align-items: center
+                    & .owl-item
+                        padding: 5px
+                        & .pagination
+                            border: none
+                            padding: 0
+        & .product__tabs
+            padding: 0 0 25px 0
+            margin-top: 50px
+            & ul.tabs
+                float: none
+                display: flex
+                align-items: center
+                margin: 0
+                width: auto
+                border: none
+                & li
+                    cursor: pointer
+                    border: none
+                    border-radius: 5px 5px 0px 0px
+                    transition: all 0.6s
+                    &::after
+                        content: ''
+                    & a
+                        padding: 20px 20px 0 20px
+                        font-size: 20px
+                        color: rgba(#2E2E2E, 0.6)
+                        font-weight: 500
+                        transition: color 0.6s
+                & li.active
+                    background-color: #F9F9F9
+                    & a
+                        font-size: 25px
+                        color: #2E2E2E
+            & .panel 
+                float: none
+                padding: 20px 
+                border-radius: 0 5px 5px 5px
+                background-color: #F9F9F9
+                & h2:first-of-type
+                    display: none
+                & p
+                    margin: 0
+                    font-size: 18px
+                    color: rgba(46, 46, 46, 0.9)
+
+@media ( max-width: 1200px )
+    .goodville-product
+        & .goodville-product__block
+            & .product__info
+                & .product__summary
+                    & .product__price
+                        font-size: 36px
+                    & .product__cart
+                        margin-top: 35px
+                        & .variations
+                            & tr
+                                &:nth-child(n+2)
+                                    margin-top: 35px
+                        & .single_variation_wrap
+                            margin-top: 35px
+                            & .single_add_to_cart_button
+                                margin-top: 15px
+                                padding-top: 5px 50px
+
+@media ( max-width: 1024px )
+    .goodville-product
+        & .goodville-product__block
+            & .product__info
+                & .product__slider
+                    width: 55%
+                & .product__summary
+                    width: 40% !important
+                    & .product__price
+                        font-size: 32px
+                    & .product__cart
+                        margin-top: 25px
+                        & .variations
+                            & tr
+                                &:nth-child(n+2)
+                                    margin-top: 25px
+                                & .label
+                                    & label
+                                        font-size: 24px
+                        & .single_variation_wrap
+                            margin-top: 25px
+            & .product__tabs
+                //width: 100% !important
+                & ul.tabs
+                    & li.active
+                        & a
+                            font-size: 22px
+                & .panel 
+                    width: 100%
+
+@media ( max-width: 768px )
+    .goodville-product
+        & .goodville-product__block
+            & .product__title
+                font-size: 26px
+            & .product__info
+                display: block
+                position: relative
+                padding-top: 50px
+                & .product__slider
+                    width: 75%
+                    margin: auto
+                & .product__summary
+                    width: 100% !important
+                    margin: 25px 0 0 0 !important
+                    padding: 0 !important
+                    max-width: none
+                    & .product__price
+                        position: absolute
+                        top: 0
+                        left: 0
+                        font-size: 28px
+                    & .product__cart
+                        & .variations
+                            & tr
+                                & .label
+                                    & label
+                                        font-size: 22px
+                                & .value
+                                    & div
+                                        & label
+                                            font-size: 18px           
+                        & .single_variation_wrap
+                            & .single_add_to_cart_button
+                                margin-top: 25px
+                                font-size: 22px
+                                padding: 5px 50px
+            & .product__tabs
+                margin-top: 35px
+
+@media ( max-width: 576px )
+    .goodville-product
+        & .goodville-product__block
+            & .product__info
+                & .product__slider
+                    width: 100%
+            & .product__slider-pagination
+                padding: 0 15px
+                & svg
+                    max-width: 14px

@@ -1,0 +1,73 @@
+.goodville-prod-reg
+    padding: 50px 0 100px 0
+    & .goodville-prod-reg__block
+        display: flex
+        align-items: center
+        justify-content: center
+        & .prod-reg
+            &__box
+                display: flex
+                justify-content: flex-end
+                background: #FFFFFF
+                box-shadow: 18px 0px 51px rgba(0, 0, 0, 0.08)
+                border-radius: 5px
+                width: 65%
+                max-width: 1255px
+                padding: 85px 10% 85px 45px
+                position: relative
+                z-index: 1
+                & .cmp-form
+                    margin-top: 30px
+            &__background
+                width: 35%
+                max-width: 680px
+
+@media (max-width: 1750px)
+    .goodville-prod-reg
+        & .goodville-prod-reg__block
+            & .prod-reg
+                &__box
+                    width: 60%
+                    padding: 50px 7% 50px 45px
+                    & .cmp-form__row
+                        & input
+                            margin-right: 10px
+                        & .cmp-form__validate
+                            margin-right: 10px
+                            & input
+                                margin: 0
+                &__background
+                    width: 40%
+
+@media (max-width: 1350px)
+    .goodville-prod-reg
+        & .goodville-prod-reg__block
+            & .prod-reg
+                &__box
+                    display: block
+                    width: 100%
+                    max-width: none
+                    padding: 50px 45px
+                    & .cmp-form__row
+                        & input
+                            margin-right: 20px
+                        & .cmp-form__validate
+                            margin-right: 20px
+                            & input
+                                margin: 0
+                &__background
+                    display: none
+
+@media (max-width: 576px)
+    .goodville-prod-reg
+        & .goodville-prod-reg__block
+            & .prod-reg
+                &__box
+                    & .cmp-form__row
+                        & input
+                            max-width: none
+                            margin-right: 0
+                        & .cmp-form__validate
+                            width: 100%
+                            margin-right: 0
+                            

@@ -1,0 +1,170 @@
+.goodville-categories
+    padding: 150px 0 50px 0
+    &__block
+        & .categories__title
+            text-align: center
+        & .goodville-categories__slider
+            position: relative
+            max-width: 785px
+            margin: auto
+            margin-top: 40px
+            padding: 0 30px
+            & .goodville-categories__item 
+                margin: auto
+                position: relative
+                display: block
+                background-repeat: no-repeat
+                background-size: cover
+                width: 345px
+                height: 560px
+                & .category__name
+                    position: absolute
+                    bottom: 20px
+                    margin: 0
+                    left: 0
+                    right: 0
+                    text-align: center
+                    color: #ffffff
+                    font-weight: 600
+                    font-size: 30px
+            & svg
+                cursor: pointer
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                max-width: 16px
+                max-height: 32px
+                opacity: 0.3
+                transition: opacity 0.5s
+                &:nth-child(1)
+                    left: 0
+                    transform: translateY(-50%) rotate(180deg)
+                &:nth-child(2)
+                    right: 0
+                &:hover
+                    opacity: 0.8
+            & .owl-dots
+                display: none
+
+@media ( max-width: 1400px )
+    .goodville-categories
+        padding: 100px 0 50px 0
+
+
+@media ( max-width: 1024px )
+    .goodville-categories
+        padding: 70px 0 50px 0
+        &__block
+            & .goodville-categories__slider
+                margin-top: 30px
+                padding: 0 24px
+
+@media ( max-width: 800px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 320px
+                    height: 520px
+
+@media ( max-width: 768px )
+    .goodville-categories
+        padding: 50px 0
+        &__block
+            & .goodville-categories__slider
+                padding: 0 18px
+                & svg
+                    max-width: 12px
+                & .goodville-categories__item
+                    width: 300px
+                    height: 490px
+                    & .category__name
+                        font-size: 28px
+                        //bottom: 
+                & .owl-dots
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    margin: auto
+                    margin-top: 25px
+                    & .owl-dot
+                        width: 20px
+                        height: 20px
+                        border-radius: 50%
+                        border: 1px solid rgba(#2E2E2E, 0.74)
+                        transition: all 0.5s
+                        &:focus
+                            outline: none
+                        &:nth-child(n+2)
+                            margin-left: 10px
+                    & .active
+                        background-color:  rgba(#2E2E2E, 0.5)
+                        border: 1px solid rgba(#2E2E2E, 0.5)
+
+@media ( max-width: 700px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 280px
+                    height: 455px
+
+@media ( max-width: 650px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 260px
+                    height: 420px
+                    & .category__name
+                        font-size: 24px
+
+@media ( max-width: 600px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 240px
+                    height: 390px
+
+@media ( max-width: 576px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                margin-top: 20px
+                padding: 0 30px
+                & .goodville-categories__item
+                    width: 345px
+                    height: 560px
+                    & .category__name
+                        font-size: 28px
+                & svg
+                    max-width: 16px
+
+@media ( max-width: 480px )
+    .goodville-categories
+        padding: 30px 0
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 320px
+                    height: 520px
+        
+@media ( max-width: 440px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                & .goodville-categories__item
+                    width: 300px
+                    height: 490px
+
+@media ( max-width: 400px )
+    .goodville-categories
+        &__block
+            & .goodville-categories__slider
+                padding: 0 18px
+                & svg
+                    max-width: 12px
+                & .goodville-categories__item
+                    width: 280px
+                    height: 455px

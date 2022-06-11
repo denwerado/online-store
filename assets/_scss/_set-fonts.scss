@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Regular'), 
+    local('Poppins-Regular'), 
+    url('../../fonts/Poppins/Poppinsregular.woff2') format('woff2'), 
+    url('../../fonts/Poppins/Poppinsregular.woff') format('woff'), 
+    url('../../fonts/Poppins/Poppinsregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Poppins-SemiBoldMedium'), 
+    local('Poppins-Medium'), 
+    url('../../fonts/Poppins/Poppinspoppins-semiboldmedium.woff2') format('woff2'), 
+    url('../fonts/Poppins/Poppinspoppins-semiboldmedium.woff') format('woff'), 
+    url('../fonts/Poppins/Poppinspoppins-semiboldmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Poppins-BoldSemiBold'), 
+    local('Poppins-SemiBold'), 
+    url('../../fonts/Poppins/Poppinspoppins-boldsemibold.woff2') format('woff2'), 
+    url('../../fonts/Poppins/Poppinspoppins-boldsemibold.woff') format('woff'), 
+    url('../../fonts/Poppins/Poppinspoppins-boldsemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Bold'), 
+    local('Poppins-Bold'), 
+    url('../../fonts/Poppins/Poppinsbold.woff2') format('woff2'), 
+    url('../../fonts/Poppins/Poppinsbold.woff') format('woff'), 
+    url('../../fonts/Poppins/Poppinsbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body.goodville-body{
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+.goodville-title{
+    margin: 0;
+    font-size: 50px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.goodville-text__bold{
+    font-weight: 700;
+}
+
+.goodville-text__gray{
+    color: rgba(46, 46, 46, 0.2)
+}
+.goodville-text__pale{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 1024px ){
+    .goodville-title{
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px ){
+    .goodville-title{
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px ){
+    .goodville-title{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px ){
+    .goodville-title{
+        font-size: 32px;
+    }
+}
+
